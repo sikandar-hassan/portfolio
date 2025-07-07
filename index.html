@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sikandar Hassan - Front-End Web Developer</title>
+  <meta name="description" content="Sikandar Hassan is a passionate front-end web developer specializing in responsive, modern HTML & CSS websites.">
+  <meta name="keywords" content="Sikandar Hassan, Front-End Developer, HTML, CSS, Responsive Web Design, Portfolio">
+  <meta name="author" content="Sikandar Hassan">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="sikandar_hassan.jpg" type="image/png">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about-section">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Social Icons -->
+  <div class="social-icons">
+    <a href="https://wa.me/923235993109" target="_blank" title="WhatsApp">
+      <img src="https://img.icons8.com/ios-filled/50/00B894/whatsapp.png" alt="WhatsApp">
+    </a>
+    <a href="https://web.facebook.com/profile.php?id=100091289715535&sk=grid" target="_blank" title="Facebook">
+      <img src="https://img.icons8.com/ios-filled/50/00B894/facebook-new.png" alt="Facebook">
+    </a>
+    <a href="mailto:sikandarhassankhanbaloch@gmail.com" title="Email">
+      <img src="https://img.icons8.com/ios-filled/50/00B894/email.png" alt="Email">
+    </a>
+  </div>
+
+  <!-- Hero Section -->
+  <header>
+    <div class="hero-text">
+      <h1>Hi, I’m Sikandar Hassan</h1>
+      <p>I build clean, fast and visually stunning portfolio websites with HTML & CSS — no bloat, just beauty and performance.</p>
+      <a href="#contact" class="cta-button">Hire Me</a>
+    </div>
+    <img src="sikandar_hassan.jpg" alt="Sikandar Hassan" class="hero-image">
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section" id="about-section">
+    <img src="sikandar_hassan.jpg" alt="Sikandar Hassan" class="profile-pic">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>I’m a focused and creative front-end developer, passionate about crafting unique digital experiences. I specialize in responsive, code-clean websites built with care and precision. Every pixel matters.</p>
+      <a href="resume.pdf" download class="cta-button" style="margin-top: 20px; display: inline-block;">Download CV</a>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section" id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+      <div>
+        <h3>HTML5</h3>
+        <p>Clean & semantic structure</p>
+      </div>
+      <div>
+        <h3>CSS3</h3>
+        <p>Modern & responsive styling</p>
+      </div>
+      <div>
+        <h3>Responsive Design</h3>
+        <p>Mobile-first approach</p>
+      </div>
+      <div>
+        <h3>Problem Solving</h3>
+        <p>Logical layout & UI thinking</p>
+      </div>
+    </div>
+  </section>
+
+ <!-- Projects Section -->
+<section class="projects-section" id="projects">
+  <h2>My Projects</h2>
+  <div class="projects-grid">
+    
+    <div class="project-card">
+      <img src="images/portfolio_project.jpg" alt="Portfolio Project">
+      <h3>Personal Portfolio</h3>
+      <p>A clean single-page portfolio website using HTML & CSS. Fully responsive and elegant layout.</p>
+      <a href="https://yourportfolio.com" target="_blank" class="live-btn">Live Preview</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/business_landing.jpg" alt="Business Landing Page">
+      <h3>Business Landing Page</h3>
+      <p>One-page product or service showcase with modern scroll effects and visual hierarchy.</p>
+      <a href="https://yourlandingpage.com" target="_blank" class="live-btn">Live Preview</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/resume_site.jpg" alt="Resume Website">
+      <h3>Resume Website</h3>
+      <p>Simple online resume with clean sections like Education, Skills, Experience, and Contact.</p>
+      <a href="https://yourresumewebsite.com" target="_blank" class="live-btn">Live Preview</a>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <p>Let’s work together! Send me a message and I’ll get back to you soon.</p>
+    <form action="https://formsubmit.co/your@email.com" method="POST" class="contact-form">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Sikandar Hassan. All rights reserved.</p>
+  </footer>
+
+  <button onclick="scrollToTop()" class="scroll-top-btn" title="Go to top">↑</button>
+
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.onscroll = function () {
+      const btn = document.querySelector('.scroll-top-btn');
+      btn.style.display = (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? "block" : "none";
+    };
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    faders.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
